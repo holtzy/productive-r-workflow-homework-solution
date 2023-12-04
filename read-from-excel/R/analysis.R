@@ -2,7 +2,7 @@ library(tidyverse)
 library(readxl)
 
 # Read data using readxl
-data <- penguins_torgersen <- read_excel("input/data.xlsx", na = "NA")
+data <- read_excel("input/data.xlsx", na = "NA")
 
 # Summary
 summary(data)
