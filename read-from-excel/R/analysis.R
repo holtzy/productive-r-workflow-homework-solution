@@ -1,7 +1,8 @@
 library(tidyverse)
+library(readxl)
 
-# Read data using readr
-data <- readr::read_csv("input/data.csv")
+# Read data using readxl
+data <- penguins_torgersen <- read_excel("input/data.xlsx", na = "NA")
 
 # Summary
 summary(data)
@@ -19,19 +20,3 @@ data %>%
   geom_point() +
   labs(x = "Bill Length (mm)", y = "Bill Depth (mm)", title = "Penguin Bill Dimensions") +
   scale_shape_manual(values = c("Adelie" = 16, "Chinstrap" = 17, "Gentoo" = 18))
-
-print(
-  round(mean(subset(
-    na.omit(data), species == "Adelie" & island == "Torgersen"
-  )$bill_length_mm), 2)
-)
-print(
-  round(mean(subset(
-    na.omit(data), species == "Adelie" & island == "Biscoe"
-  )$bill_length_mm), 2)
-)
-print(
-  round(mean(subset(
-    na.omit(data), species == "Adelie" & island == "Dream"
-  )$bill_length_mm), 2)
-)
