@@ -1,0 +1,50 @@
+---
+title: "Penguin"
+format: html
+editor: source
+---
+
+## Introduction
+
+We'll explain what our work is about here.
+
+Let's load libraries first
+
+```{r, message=F, warning=F}
+# load the tidyverse
+library(tidyverse)
+```
+
+
+## Loading data
+
+The dataset has already been loaded and cleaned in the previous step of this pipeline.
+
+Let's load the clean version, together with a few functions available in functions.R.
+
+```{r}
+# Source functions
+source(file="functions.R")
+
+# Read the clean dataset
+data <- readRDS(file = "../input/clean_data.rds")
+```
+
+## Bill length
+
+```{r}
+# Summary
+summary(data)
+
+# Calculating mean bill length for different species and islands using dplyr
+data %>%
+  filter(species == "Adelie") %>%
+  group_by(island) %>%
+  summarize(mean_bill_length = round(mean(bill_length_mm, na.rm = TRUE), 2))
+
+# Use the function in functions.R
+create_scatterplot(data, "Adelie", "Torgersen")
+
+```
+
+
