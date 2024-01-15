@@ -6,18 +6,33 @@ editor: source
 
 ## Introduction
 
-This is our first quarto document. For now it includes our current penguin analysis code below:
+We'll explain what our work is about here.
 
-```{r}
+Let's load libraries first
+
+```{r, message=F, warning=F}
 # load the tidyverse
 library(tidyverse)
+```
 
+
+## Loading data
+
+The dataset has already been loaded and cleaned in the previous step of this pipeline.
+
+Let's load the clean version, together with a few functions available in functions.R.
+
+```{r}
 # Source functions
 source(file="functions.R")
 
 # Read the clean dataset
 data <- readRDS(file = "../input/clean_data.rds")
+```
 
+## Bill length
+
+```{r}
 # Summary
 summary(data)
 
@@ -29,6 +44,7 @@ data %>%
 
 # Use the function in functions.R
 create_scatterplot(data, "Adelie", "Torgersen")
+
 ```
 
 
