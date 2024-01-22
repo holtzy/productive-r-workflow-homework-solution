@@ -96,8 +96,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>We’ll explain what our work is about here.</p>
-<p>Let’s load libraries first</p>
+<p>This document offers a straightforward analysis of the well-known penguin dataset. It is designed to complement the <a href="https://www.productive-r-workflow.com">Productive R Workflow</a> online course.</p>
+<p>You can read more about the penguin dataset <a href="https://allisonhorst.github.io/palmerpenguins/">here</a>.</p>
+<p>Let’s load libraries before we start!</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load the tidyverse</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -106,7 +107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="loading-data" class="level2">
 <h2 class="anchored" data-anchor-id="loading-data">Loading data</h2>
 <p>The dataset has already been loaded and cleaned in the previous step of this pipeline.</p>
-<p>Let’s load the clean version, together with a few functions available in functions.R.</p>
+<p>Let’s load the clean version, together with a few functions available in <code>functions.R</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Source functions</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="at">file=</span><span class="st">"functions.R"</span>)</span>
@@ -117,6 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="bill-length" class="level2">
 <h2 class="anchored" data-anchor-id="bill-length">Bill length</h2>
+<p>Now, let’s make some descriptive analysis about the bill length, including summary statistics and graphs:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Summary</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

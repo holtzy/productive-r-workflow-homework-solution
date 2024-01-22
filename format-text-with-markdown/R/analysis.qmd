@@ -6,9 +6,11 @@ editor: source
 
 ## Introduction
 
-We'll explain what our work is about here.
+This document offers a straightforward analysis of the well-known penguin dataset. It is designed to complement the [Productive R Workflow](https://www.productive-r-workflow.com) online course.
 
-Let's load libraries first
+You can read more about the penguin dataset [here](https://allisonhorst.github.io/palmerpenguins/).
+
+Let's load libraries before we start!
 
 ```{r, message=F, warning=F}
 # load the tidyverse
@@ -20,7 +22,7 @@ library(tidyverse)
 
 The dataset has already been loaded and cleaned in the previous step of this pipeline.
 
-Let's load the clean version, together with a few functions available in functions.R.
+Let's load the clean version, together with a few functions available in `functions.R`.
 
 ```{r}
 # Source functions
@@ -30,7 +32,10 @@ source(file="functions.R")
 data <- readRDS(file = "../input/clean_data.rds")
 ```
 
+
 ## Bill length
+
+Now, let's make some descriptive analysis about the bill length, including summary statistics and graphs:
 
 ```{r}
 # Summary
