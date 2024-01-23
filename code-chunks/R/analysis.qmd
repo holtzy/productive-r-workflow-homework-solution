@@ -1,6 +1,9 @@
 ---
 title: "Penguin"
-format: html
+format:
+  html:
+    code-fold: true
+    code-summary: "Show the code"
 editor: source
 ---
 
@@ -12,10 +15,12 @@ You can read more about the penguin dataset [here](https://allisonhorst.github.i
 
 Let's load libraries before we start!
 
-```{r}
+```{r, message=F, warning=F}
 # load the tidyverse
 library(tidyverse)
 ```
+
+
 
 ## Loading data
 
@@ -33,18 +38,24 @@ data <- readRDS(file = "../input/clean_data.rds")
 
 ## Bill length
 
-Now, let's make some descriptive analysis about the bill length, including summary statistics and graphs:
+Now, let's make some descriptive analysis about the bill length, including summary statistics and graphs.
+
+Let's start by checking the mean bill length for different species and islands:
 
 ```{r}
 # Summary
-summary(data)
+# summary(data)
 
 # Calculating mean bill length for different species and islands using dplyr
 data %>%
   filter(species == "Adelie") %>%
   group_by(island) %>%
   summarize(mean_bill_length = round(mean(bill_length_mm, na.rm = TRUE), 2))
+```
 
+Now, let's check the relationship between bill depth and bill length for the specie `Adelie` on the island `Torgersen`:
+
+```{r}
 # Use the function in functions.R
 create_scatterplot(data, "Adelie", "Torgersen")
 
