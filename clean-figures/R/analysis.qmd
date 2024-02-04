@@ -42,7 +42,7 @@ data <- readRDS(file = "../input/clean_data.rds")
 ```
 
 
-![Bill measurement](asset/culmen_depth.png){width=3in}
+![Bill measurement explanation](asset/culmen_depth.png){width=300}
 
 
 
@@ -80,7 +80,7 @@ data %>%
   summarise(average_bill_depth = mean(bill_depth_mm, na.rm = TRUE))
 ```
 
-This canNow, let's check the relationship between bill depth and bill length for the specie `Adelie` on the island `Torgersen`:
+Now, let's check the relationship between bill depth and bill length for the specie `Adelie` on the island `Torgersen`:
 
 ```{r, warning=FALSE, fig.height=3, fig.width=9, fig.cap="There is actually a positive correlation when split by species."}
 
