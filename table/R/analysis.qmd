@@ -61,6 +61,10 @@ Note that `bill_length_mm` and `bill_depth_mm` have the following signification.
 
 In case you're wondering how the original dataset looks like, here is a searchable version of it, made using the `DT` package:
 
+```{r}
+datatable(data, options = list(pageLength = 5), filter = "top")
+```
+
 
 
 
