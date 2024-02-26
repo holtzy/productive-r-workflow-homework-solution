@@ -1,20 +1,27 @@
 ---
 title: "Exploring the Simpson's Paradox Within the Penguin Dataset"
-author: "Yan Holtz"
-date: "March 2024"
+subtitle: "And simultaneously demonstrating the capabilities of Quarto." 
 format:
   html:
     code-fold: true
-    code-summary: "Show the code"
+    code-summary: "Code"
     toc: true
     toc-location: left
     toc-title: " "
     number-sections: true
 editor: source
 fig-cap-location: margin
+author: 
+  name: "Yan Holtz"
+  affiliation: "Independant 😀"
+  email: yan.holtz.data@gmail.com
+keywords: "Quarto, Paradox, Data Analysis"
+date: today
+description: "This document is a short analysis of the Penguin Dataset. It explores the relationship between bill length and bill depth and show how important it is to consider group effects."
+title-block-banner: "#f0f3f5"
+title-block-banner-color: "black"
 css: style.css
 ---
-
 
 ::: {.callout-caution collapse="true"}
 ## A few consideration about this doc
